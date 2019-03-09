@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="MusicLib.AddSongsToPlaylist"
+    x:Class="MusicLib.PlayPlaylist"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MusicLib"
@@ -21,17 +21,19 @@
 
         <Button Content="+ Add Playlist" Click="Add_Click" HorizontalAlignment="Left" Margin="129,142.6,0,0" VerticalAlignment="Top" Grid.Row="1" Height="33" Width="113"/>
         <Button Content="Back" Click="Back_Click" HorizontalAlignment="Center" Margin="0,148.6,0,0" VerticalAlignment="Top" Grid.Row="1" Height="33" Width="52"/>
-        <TextBlock HorizontalAlignment="Left" Margin="380,119,0,0" Text="Add Songs to the Playlist" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="176"/>
-        <ListView x:Name="MyList">
-            <DataTemplate>
-                <Grid>
-                    <TextBlock Text="{Binding SongName}"></TextBlock>
-                    <TextBlock Text="{Binding Album}"></TextBlock>
-                    <TextBlock Text="{Binding Path}"></TextBlock>
-                </Grid>
-            </DataTemplate>
-        </ListView>
-    </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="380,119,0,0" Text="PLAYLIST" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="176"/>
 
+        <ListView x:Name="SupplyLevels" Grid.Row="4" ItemsSource="{Binding songs }" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Path=SongName, Mode=TwoWay}" />
+                        <Button Content="{Binding Path=SongName, Mode=TwoWay}" Click="Add_Click"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
 
 </Page>

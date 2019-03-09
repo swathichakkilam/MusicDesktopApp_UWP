@@ -2,6 +2,7 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/MusicLib/obj
 /MusicLib/bin/x86/Debug
+/MusicLib/obj
+/.vs/MusicLib/v15/Server/sqlite3
 /MusicLib/Assets
