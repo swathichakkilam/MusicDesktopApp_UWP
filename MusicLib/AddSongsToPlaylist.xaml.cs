@@ -44,6 +44,7 @@ namespace MusicLib
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            this.Frame.Navigate(typeof(PlayPlaylist));
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

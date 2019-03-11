@@ -32,7 +32,7 @@ namespace MusicLib
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(PlayPlaylist));
+            Frame.Navigate(typeof(AddPPlaylist));
         }
     }
 }
