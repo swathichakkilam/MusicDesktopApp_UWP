@@ -37,6 +37,4 @@
             </ItemsControl.ItemTemplate>
         </ItemsControl>
     </Grid>
-
-
 </Page>
